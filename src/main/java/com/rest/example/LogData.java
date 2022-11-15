@@ -1,14 +1,29 @@
 package com.rest.example;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="logdata")
 public class LogData {
 
+	@Id
+	@GeneratedValue
+	@Column(name="Id")
 	private int id;
+
+	@Column(name="coderepogroup")
 	private String coderepogroup;
+	@Column(name="coderepofolf")
 	private String coderepofolf;
+	@Column(name="coderepoliason")
 	private String coderepoliason;
+	@Column(name="coderepolevy")
 	private String coderepolevy;
-	
-	
 	
 	public LogData() {
 		super();
